@@ -148,8 +148,7 @@
         z-index: 12;
         width: auto;
         display: grid;
-        grid-template-columns: minmax(340px, 500px) 1fr;
-        gap: 22px;
+        grid-template-columns: 1fr;
         align-items: center;
         pointer-events: none;
         opacity: 0;
@@ -207,6 +206,8 @@
         grid-template-columns: repeat(var(--items), minmax(0, 1fr));
         align-items: start;
         gap: 0;
+        width: min(1080px, calc(100vw - 72px));
+        margin: 0 auto;
         min-width: 0;
         padding-top: 3px;
       }
@@ -269,7 +270,6 @@
           right: 14px;
           width: calc(100vw - 28px);
           grid-template-columns: 1fr;
-          gap: 10px;
         }
         .topbar.on .top-current {
           left: 24px;
