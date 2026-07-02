@@ -1,0 +1,13 @@
+{
+  "name": "theater-slideshow",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Cinematic self-contained anniversary slideshow for the Kolpingtheater Ramsen. Runs by double-clicking index.html — no server, no install.",
+  "scripts": {
+    "fetch": "node scripts/fetch-albums.mjs",
+    "download": "node scripts/download-photos.mjs",
+    "build": "node scripts/build-standalone.mjs",
+    "refresh": "node scripts/fetch-albums.mjs && node scripts/download-photos.mjs && node scripts/build-standalone.mjs"
+  }
+}
