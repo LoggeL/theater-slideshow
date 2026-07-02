@@ -16,12 +16,12 @@ in `photos/`).
 ## Konzept
 
 - Jedes Album beginnt mit seinem **Deckblatt** (Cover + Titel + Jahr + Text).
-- Die **Stück-Alben** laufen chronologisch (2019 → 2025).
-- Nach je **2 Stücken** folgt ein **Team-Album als Pause** (rotierend:
+- Die **Stück-Alben** laufen chronologisch (2017 → 2025).
+- Nach jedem **Stück** folgt ein **Team-Album als Pause** (rotierend:
   Hinter den Kulissen → Kreativbühne → Präsentation).
 
 Stellgrößen (Rhythmus, Timing, Texte) stehen oben im `<script>` von `index.html`
-(`PLAYS_PER_BLOCK`, `PLAY_ORDER`, `TIMING`, `PLAY_BLURB`).
+(`PLAY_ORDER`, `TIMING`, `PLAY_BLURB`).
 
 ## Aufbau
 
