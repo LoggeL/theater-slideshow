@@ -156,6 +156,12 @@
         transition: opacity 0.45s ease;
       }
       .topbar.on { opacity: 1; }
+      .topbar.on .top-current {
+        position: fixed;
+        left: 48px;
+        bottom: 92px;
+        width: min(500px, calc(100vw - 96px));
+      }
       .top-current {
         min-width: 0;
         padding: 14px 18px;
@@ -264,6 +270,11 @@
           width: calc(100vw - 28px);
           grid-template-columns: 1fr;
           gap: 10px;
+        }
+        .topbar.on .top-current {
+          left: 24px;
+          bottom: 76px;
+          width: calc(100vw - 48px);
         }
         .top-current { padding: 8px 10px; }
         .timeline { overflow: hidden; }
