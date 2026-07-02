@@ -8,6 +8,8 @@
  *   2. GET /api/albums/<albumId>  with header
  *      x-immich-share-key: <KEY>                   -> full asset list
  *
+ * For private albums without a share key, set IMMICH_EMAIL and IMMICH_PASSWORD.
+ *
  * Images are referenced directly at runtime via the thumbnail/original
  * endpoints, so nothing is downloaded here.
  *
@@ -19,6 +21,7 @@ import { dirname, resolve } from 'node:path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const API = 'https://photo.rittmann.cloud'
+let authToken = null
 
 // ── Album definitions ────────────────────────────────────────────────────
 // `kind`: 'play' = theater production, 'team' = behind-the-scenes / pause album.
@@ -47,6 +50,16 @@ const ALBUMS = [
     key: 'nQLb_Bgjhr2VGB4N9nWVbjJjnBs_eK3ZYe7lSjnhCd6shHfOs353QXlDODHHdZrMZwk',
     kind: 'play', slug: 'kristall', playSlug: 'kristall', order: 2,
     title: 'Der Kristall der Träume', year: 2020,
+  },
+  {
+    albumName: 'Verrat im Kloster Theaterfest',
+    kind: 'play', slug: 'verrat-im-kloster', playSlug: 'verrat-im-kloster', order: -1,
+    title: 'Verrat im Kloster', year: 2017,
+  },
+  {
+    albumName: 'Bluttribut Theaterfest',
+    kind: 'play', slug: 'bluttribut', playSlug: 'bluttribut', order: 0,
+    title: 'Bluttribut', year: 2018,
   },
   {
     key: 'q58Rv2q--5jRkiouaECithvIrEhucpx6ym0Bw7_3-LJr_z9atHOpbLZjUTY_oogk6NM',
@@ -86,14 +99,51 @@ async function getJson(url, { headers } = {}) {
   return res.json()
 }
 
-async function fetchAlbum(def) {
+async function login() {
+  if (authToken) return authToken
+  const email = process.env.IMMICH_EMAIL
+  const password = process.env.IMMICH_PASSWORD
+  if (!email || !password) {
+    throw new Error('Private Immich albums need IMMICH_EMAIL and IMMICH_PASSWORD.')
+  }
+
+  const res = await fetch(`${API}/api/auth/login`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ email, password }),
+  })
+  if (!res.ok) throw new Error(`${res.status} ${API}/api/auth/login`)
+  authToken = (await res.json()).accessToken
+  return authToken
+}
+
+async function getPrivateAlbum(def) {
+  const token = await login()
+  const albums = await getJson(`${API}/api/albums`, {
+    headers: { authorization: `Bearer ${token}` },
+  })
+  const match = albums.find((a) => a.id === def.albumId || a.albumName === def.albumName)
+  if (!match) throw new Error(`Album not found: ${def.albumName || def.albumId}`)
+
+  const full = await getJson(`${API}/api/albums/${match.id}`, {
+    headers: { authorization: `Bearer ${token}` },
+  })
+  return { meta: { album: match }, full }
+}
+
+async function getSharedAlbum(def) {
   const meta = await getJson(`${API}/api/shared-links/me?key=${def.key}`)
   const albumId = meta.album.id
-  const thumbId = meta.album.albumThumbnailAssetId
-
   const full = await getJson(`${API}/api/albums/${albumId}`, {
     headers: { 'x-immich-share-key': def.key },
   })
+  return { meta, full }
+}
+
+async function fetchAlbum(def) {
+  const { meta, full } = def.key ? await getSharedAlbum(def) : await getPrivateAlbum(def)
+  const albumId = meta.album.id
+  const thumbId = meta.album.albumThumbnailAssetId
 
   // Keep images only, drop live-photo videos. Preserve album order (the first
   // asset is the curated cover / "Deckblatt").
@@ -110,6 +160,7 @@ async function fetchAlbum(def) {
 
   return {
     ...def,
+    key: def.key || null,
     albumId,
     albumName: meta.album.albumName,
     coverId,

@@ -23,6 +23,7 @@ const manifest = JSON.parse(
   await import('node:fs').then((fs) => fs.readFileSync(manifestPath, 'utf8')),
 )
 const API = manifest.api
+let authToken = null
 
 const exists = (p) =>
   access(p, constants.F_OK)
@@ -32,12 +33,33 @@ const exists = (p) =>
 async function download(album, asset, dir) {
   const dest = resolve(dir, `${asset.id}.jpg`)
   if (await exists(dest)) return 'skip'
-  const url = `${API}/api/assets/${asset.id}/thumbnail?key=${album.key}&size=${SIZE}`
-  const res = await fetch(url)
+  const url = album.key
+    ? `${API}/api/assets/${asset.id}/thumbnail?key=${album.key}&size=${SIZE}`
+    : `${API}/api/assets/${asset.id}/thumbnail?size=${SIZE}`
+  const headers = album.key ? undefined : { authorization: `Bearer ${await login()}` }
+  const res = await fetch(url, { headers })
   if (!res.ok) throw new Error(`${res.status} for ${asset.id}`)
   const buf = Buffer.from(await res.arrayBuffer())
   await writeFile(dest, buf)
   return 'ok'
+}
+
+async function login() {
+  if (authToken) return authToken
+  const email = process.env.IMMICH_EMAIL
+  const password = process.env.IMMICH_PASSWORD
+  if (!email || !password) {
+    throw new Error('Private Immich albums need IMMICH_EMAIL and IMMICH_PASSWORD.')
+  }
+
+  const res = await fetch(`${API}/api/auth/login`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ email, password }),
+  })
+  if (!res.ok) throw new Error(`${res.status} ${API}/api/auth/login`)
+  authToken = (await res.json()).accessToken
+  return authToken
 }
 
 async function runQueue(tasks, concurrency) {
