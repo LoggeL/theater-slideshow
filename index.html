@@ -598,11 +598,7 @@
       function currentPlay(s) {
         if (s.type === 'intro') return null;
         if (s.album.kind === 'play') return s.album;
-        for (let i = idx - 1; i >= 0; i--) {
-          const prev = SEQ[i];
-          if (prev.album && prev.album.kind === 'play') return prev.album;
-        }
-        return ordered[0] || null;
+        return null;
       }
 
       function updateTopbar(s) {
@@ -622,7 +618,7 @@
           ? (TEAM_BLURB[a.slug] || '')
           : (PLAY_BLURB[a.playSlug] || '');
         const items = timelineItems.map((p) => {
-          const state = p.slug === play?.slug ? ' active' : (p.order < activeOrder ? ' done' : '');
+          const state = p.slug === play?.slug ? ' active' : '';
           return (
             '<div class="tl-item' + state + '">' +
               '<span class="tl-dot"></span>' +
