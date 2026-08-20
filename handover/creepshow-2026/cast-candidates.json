@@ -1,0 +1,350 @@
+{
+ "Carina": {
+  "role": "Drusilla",
+  "files": [],
+  "note": "KEINE FAVS (Caro?)"
+ },
+ "Elena": {
+  "role": "Lucy",
+  "files": [],
+  "note": "KEINE FAVS (Elena)"
+ },
+ "Fernanda": {
+  "role": "Tante Heideltraut von Storchensumpf",
+  "immich": "Fernanda",
+  "files": [
+   "DSC07666.jpg",
+   "DSC07762.jpg",
+   "DSC07768.jpg",
+   "DSC07834.jpg",
+   "DSC07863.jpg",
+   "DSC07871.jpg",
+   "DSC07909.jpg",
+   "DSC07954.jpg",
+   "DSC07978.jpg",
+   "DSC07994.jpg",
+   "DSC08000.jpg",
+   "DSC08014.jpg"
+  ]
+ },
+ "Fynn": {
+  "role": "Ensemble",
+  "immich": "Fynn",
+  "files": [
+   "DSC03943.jpg",
+   "DSC04266.jpg",
+   "DSC04270.jpg",
+   "DSC04282.jpg",
+   "DSC04286.jpg",
+   "DSC04289.jpg",
+   "DSC04308.jpg",
+   "DSC04310.jpg",
+   "DSC04322.jpg"
+  ]
+ },
+ "Hendrik": {
+  "role": "Karl",
+  "immich": "Hendrik",
+  "files": [
+   "DSC00909.jpg",
+   "DSC00945.jpg",
+   "DSC00978.jpg",
+   "DSC01010.jpg",
+   "DSC01013.jpg",
+   "DSC01032.jpg"
+  ]
+ },
+ "Jakob": {
+  "role": "Bruno",
+  "immich": "Jakob",
+  "files": [
+   "DSC01209.jpg",
+   "DSC01211.jpg",
+   "DSC01247.jpg",
+   "DSC01256.jpg",
+   "DSC01391.jpg",
+   "DSC01434.jpg",
+   "DSC01464.jpg"
+  ]
+ },
+ "Jonas": {
+  "role": "Vetter Viktor",
+  "files": [],
+  "note": "KEINE FAVS (Jonas)"
+ },
+ "Jule": {
+  "role": "Motte",
+  "immich": "Jule",
+  "files": [
+   "DSC00289.jpg",
+   "DSC00359.jpg",
+   "DSC00363.jpg",
+   "DSC00390.jpg",
+   "DSC00397.jpg"
+  ]
+ },
+ "Julian": {
+  "role": "Ensemble",
+  "immich": "Julian",
+  "files": [
+   "DSC02361.jpg",
+   "DSC02381.jpg",
+   "DSC02425.jpg",
+   "DSC02446.jpg",
+   "DSC02465.jpg"
+  ]
+ },
+ "Lena": {
+  "role": "Ensemble",
+  "immich": "Lena",
+  "files": [
+   "DSC07080.jpg",
+   "DSC07146.jpg",
+   "DSC07176.jpg",
+   "DSC07462.jpg",
+   "DSC07503.jpg",
+   "DSC07523.jpg",
+   "DSC07534.jpg",
+   "DSC07559.jpg",
+   "DSC07570.jpg",
+   "DSC07633.jpg"
+  ]
+ },
+ "Lina": {
+  "role": "Fiona",
+  "files": [],
+  "note": "KEINE FAVS (??)"
+ },
+ "LinaK": {
+  "role": "Portrait",
+  "immich": "Lina_K.",
+  "files": [
+   "DSC02141.jpg",
+   "DSC02170.jpg"
+  ]
+ },
+ "Logge": {
+  "role": "Bote / Diener",
+  "immich": "Logge",
+  "files": [
+   "DSC00009.jpg",
+   "DSC00053.jpg",
+   "DSC00058.jpg",
+   "DSC00066.jpg",
+   "DSC09626.jpg",
+   "DSC09653.jpg",
+   "DSC09659.jpg",
+   "DSC09674.jpg",
+   "DSC09696.jpg",
+   "DSC09738.jpg",
+   "DSC09763.jpg",
+   "DSC09765.jpg",
+   "DSC09772.jpg",
+   "DSC09792.jpg",
+   "DSC09935.jpg",
+   "DSC09986.jpg",
+   "DSC09996.jpg"
+  ],
+  "confirmed_identity": "Johannes / Logge",
+  "identity_note": "User confirmed: the referenced sheet/image is all Logge aka Johannes."
+ },
+ "Louis": {
+  "role": "Graf Thaddäus von Falkenstein",
+  "files": [],
+  "note": "KEINE FAVS (Louis)"
+ },
+ "Marcella": {
+  "role": "Suzie",
+  "immich": "Marcella",
+  "files": [
+   "DSC01642.jpg",
+   "DSC01646.jpg",
+   "DSC01700.jpg",
+   "DSC01702.jpg",
+   "DSC01736.jpg",
+   "DSC01745.jpg",
+   "DSC01776.jpg",
+   "DSC01789.jpg"
+  ]
+ },
+ "Max": {
+  "role": "Ensemble",
+  "immich": "Max",
+  "files": [
+   "DSC08313.jpg",
+   "DSC08335.jpg",
+   "DSC08366.jpg",
+   "DSC08576.jpg",
+   "DSC08584.jpg",
+   "DSC08611.jpg",
+   "DSC08635.jpg",
+   "DSC08653.jpg",
+   "DSC08665.jpg",
+   "DSC08699.jpg",
+   "DSC08704.jpg",
+   "DSC08711.jpg",
+   "DSC08731.jpg"
+  ]
+ },
+ "Maximilian": {
+  "role": "Ensemble",
+  "immich": "Maximilian",
+  "files": [
+   "DSC01318.jpg",
+   "DSC01345.jpg",
+   "DSC01366.jpg",
+   "DSC01638.jpg",
+   "DSC01646.jpg",
+   "DSC01670.jpg",
+   "DSC01694.jpg"
+  ]
+ },
+ "Nela": {
+  "role": "Felia",
+  "immich": "Nela",
+  "files": [
+   "DSC04455.jpg",
+   "DSC04462.jpg",
+   "DSC04470.jpg",
+   "DSC04479.jpg",
+   "DSC04520.jpg",
+   "DSC04545.jpg",
+   "DSC04559.jpg",
+   "DSC04582.jpg",
+   "DSC04592.jpg",
+   "DSC04605.jpg",
+   "DSC04616.jpg"
+  ]
+ },
+ "Nele": {
+  "role": "Prinzessin Iset",
+  "immich": "Nele",
+  "files": [
+   "DSC05733.jpg",
+   "DSC05738.jpg",
+   "DSC05785.jpg",
+   "DSC05819.jpg",
+   "DSC05841.jpg",
+   "DSC05842.jpg",
+   "DSC05894.jpg",
+   "DSC05903.jpg"
+  ]
+ },
+ "Niko": {
+  "role": "Praktikant Emil",
+  "immich": "Nikodem",
+  "files": [
+   "DSC08086.jpg",
+   "DSC08104.jpg",
+   "DSC08206.jpg",
+   "DSC08275.jpg",
+   "DSC08374.jpg",
+   "DSC08385.jpg",
+   "DSC08419.jpg",
+   "DSC08421.jpg",
+   "DSC08439.jpg",
+   "DSC08464.jpg",
+   "DSC08496.jpg",
+   "DSC08509.jpg"
+  ]
+ },
+ "Nora": {
+  "role": "Portrait",
+  "immich": "Nora",
+  "files": [
+   "DSC06122.jpg",
+   "DSC06140.jpg",
+   "DSC06142.jpg",
+   "DSC06199.jpg",
+   "DSC06208.jpg",
+   "DSC06219.jpg",
+   "DSC06223.jpg"
+  ]
+ },
+ "Raphael": {
+  "role": "Diener",
+  "immich": "Raphael",
+  "files": [
+   "DSC06395.jpg",
+   "DSC06426.jpg",
+   "DSC06444.jpg",
+   "DSC06494.jpg",
+   "DSC06590.jpg",
+   "DSC06600.jpg",
+   "DSC06642.jpg",
+   "DSC06646.jpg",
+   "DSC06677.jpg"
+  ]
+ },
+ "Sebastian": {
+  "role": "Butler Wilson / Regie",
+  "files": [],
+  "note": "KEINE FAVS (Sebastian)"
+ },
+ "Sophie": {
+  "role": "Mia",
+  "immich": "Sophie",
+  "files": [
+   "DSC03755.jpg",
+   "DSC03784.jpg"
+  ]
+ },
+ "Theresa": {
+  "role": "Clara",
+  "files": [],
+  "note": "KEINE FAVS (Theresa)"
+ },
+ "Till": {
+  "role": "Herr Schniebli",
+  "immich": "Till",
+  "files": [
+   "DSC04930.jpg",
+   "DSC05098.jpg",
+   "DSC05102.jpg",
+   "DSC05112.jpg",
+   "DSC05116.jpg",
+   "DSC05156.jpg",
+   "DSC05178.jpg",
+   "DSC05189.jpg",
+   "DSC05201.jpg",
+   "DSC05221.jpg",
+   "DSC05254.jpg",
+   "DSC05286.jpg",
+   "DSC05290.jpg"
+  ]
+ },
+ "Tobias": {
+  "role": "Jacques",
+  "immich": "Tobi",
+  "files": [
+   "DSC02688.jpg",
+   "DSC02710.jpg",
+   "DSC02731.jpg",
+   "DSC02772.jpg",
+   "DSC02777.jpg",
+   "DSC02787.jpg",
+   "DSC02793.jpg"
+  ]
+ },
+ "Vanessa": {
+  "role": "Ensemble",
+  "immich": "Vanessa",
+  "files": [
+   "DSC06725.jpg",
+   "DSC06797.jpg",
+   "DSC06805.jpg",
+   "DSC07298.jpg",
+   "DSC07340.jpg",
+   "DSC07404.jpg",
+   "DSC07443.jpg",
+   "DSC07448.jpg"
+  ]
+ },
+ "Yunus": {
+  "role": "Dr. Adrian Düsterwald",
+  "immich": "Yunus",
+  "files": [
+   "DSC09493.jpg"
+  ]
+ }
+}
