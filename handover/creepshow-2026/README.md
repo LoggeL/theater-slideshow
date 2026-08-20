@@ -8,8 +8,8 @@ Sebastians Request vorbereiten: Rollen-/Cast-Slides passend zum Stück bauen.
 
 Layout-Idee:
 - eine Seite: Rollenbild / Cast-Foto
-- andere Seite: Plakatmotiv ohne Termine/Daten
-- Personen sollen visuell „aufs Bild schauen“: Plakatvariante links/rechts je nach Blickrichtung nutzen
+- andere Seite: eines der beiden offiziellen Hochformat-Plakate mit unterschiedlichen Charakter-Sets
+- Personen und Plakatseite wechseln alternierend links/rechts; auch das Plakatmotiv wechselt pro Rolle
 - unten Beschriftung, z. B. `Louis Noé – Graf Thaddäus von Falkenstein` oder `Graf Thaddäus von Falkenstein – Louis Noé`
 - zusätzlich Web-Version fürs Kreativteam/Cast, alternierend Bild/Plakat links/rechts
 
@@ -33,7 +33,10 @@ handover/creepshow-2026/
 ├── sheets/                # 11 Contact-Sheets mit Nummerierung #0..#376
 ├── personsheets/          # pro erkannter Person ein Kandidaten-Sheet
 ├── cast-candidates.json   # Cast -> Rolle -> Kandidatenbilder
+├── creepshow-poster-moon.jpeg    # offizielles Hochformat-Plakat, Charakter-Set Mond/Haus
+├── creepshow-poster-castle.jpeg  # offizielles Hochformat-Plakat, Charakter-Set Schloss
 ├── manual-corrections.md  # manuelle Korrekturen
+├── index.html             # responsive Cast-/Rollen-Slideshow
 └── README.md              # diese Datei
 ```
 
@@ -85,22 +88,17 @@ Aktueller Stand:
 
 - 29 Cast-Mitglieder
 - 22 Personen mit automatisch zugeordneten Kandidatenbildern
-- 179 Kandidatenbilder insgesamt
-- 7 ohne sicheren Match:
-  - Carina
-  - Elena
-  - Jonas
-  - Lina
-  - Louis
-  - Sebastian
-  - Theresa
+- 7 Personen visuell gegen die beschrifteten Team-Avatare zugeordnet
+- 29 Personen mit ausgewähltem `selectedFile`
+- 251 Kandidatenreferenzen auf 249 eindeutige Bilder; gemeinsame Szenen dürfen mehreren Personen zugeordnet sein
+- keine Person mehr ohne Match
 
 Aliases/unsichere Matches:
 
 - `Niko` -> Immich `Nikodem`
 - `Tobias` -> Immich `Tobi`
 - `LinaK` -> Immich `Lina_K.`
-- `Carina` könnte Immich `Caro` sein, aber bitte visuell prüfen
+- `Carina` -> Immich `Caro` (von Logge bestätigt)
 
 ## Manuelle Korrektur vom 20.08.
 
@@ -112,23 +110,29 @@ Diese Bilder nur für **Logge / Johannes — Bote / Diener** verwenden, nicht f�
 
 Siehe auch `manual-corrections.md`.
 
+## Cast-App starten
+
+Im Repo-Root einen lokalen Server starten:
+
+```bash
+python3 -m http.server 4173
+```
+
+Danach `http://127.0.0.1:4173/handover/creepshow-2026/` öffnen.
+
+Steuerung: `←/→` = Rollen wechseln · `Leertaste` = Autoplay · `F` = Vollbild.
+
 ## Offene Punkte
 
-1. Fehlende 7 Personen visuell aus den Contact-Sheets zuordnen.
-2. `Caro` = `Carina` prüfen.
-3. Vollnamen ergänzen. `team.json` enthält meist nur Vornamen.
-4. Plakatmotiv **ohne Termine/Daten** beschaffen.
-5. Finales Design bauen:
-   - Print-/Screen-Slides mit Rollenbild + Plakatmotiv
-   - Web-Komponente im Stil der Website
-6. Entscheiden, ob Beschriftung `Schauspieler – Rolle` oder `Rolle – Schauspieler`.
+1. Vollnamen ergänzen. `team.json` enthält meist nur Vornamen.
+2. Aus der geprüften Web-App bei Bedarf Print-Dateien exportieren.
+3. Beschriftungsreihenfolge final freigeben; die App zeigt derzeit `Schauspieler` über `Rolle`.
 
 ## Vorschlag fürs Weiterarbeiten
 
-1. `personsheets/` durchgehen und pro Person das beste Bild wählen.
-2. Fehlende Personen in `sheets/` über die nummerierten Contact-Sheets suchen.
-3. `cast-candidates.json` um `selectedFile` ergänzen.
-4. Danach Generator bauen, der aus Cast/Rolle/Bild/Plakat die finalen Slides rendert.
+1. Die ausgewählten Rollenbilder in der Cast-App prüfen.
+2. Bei Änderungswünschen `selectedFile` in `cast-candidates.json` ersetzen.
+3. Print-/Screen-Ausgaben mit den beiden eingebauten offiziellen Plakatmotiven freigeben.
 
 ## Repo-Kontext
 

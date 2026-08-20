@@ -1,17 +1,54 @@
 {
  "Carina": {
   "role": "Drusilla",
-  "files": [],
-  "note": "KEINE FAVS (Caro?)"
+  "immich": "Caro",
+  "files": [
+   "DSC06292.jpg",
+   "DSC06334.jpg",
+   "DSC06349.jpg",
+   "DSC06890.jpg",
+   "DSC06957.jpg",
+   "DSC06961.jpg",
+   "DSC06998.jpg",
+   "DSC07011.jpg",
+   "DSC07035.jpg",
+   "DSC07041.jpg",
+   "DSC07053.jpg"
+  ],
+  "selectedFile": "DSC06957.jpg",
+  "matchSource": "visual match against team avatars",
+  "note": "Caro = Carina, confirmed by Logge"
  },
  "Elena": {
   "role": "Lucy",
-  "files": [],
-  "note": "KEINE FAVS (Elena)"
+  "files": [
+   "DSC00166.jpg",
+   "DSC00255.jpg",
+   "DSC00266.jpg",
+   "DSC00876.jpg",
+   "DSC00883.jpg",
+   "DSC00955.jpg",
+   "DSC01008.jpg",
+   "DSC01025.jpg",
+   "DSC01087.jpg",
+   "DSC01095.jpg",
+   "DSC01105.jpg",
+   "DSC01117.jpg",
+   "DSC01125.jpg",
+   "DSC01128.jpg",
+   "DSC01154.jpg",
+   "DSC01159.jpg",
+   "DSC01200.jpg",
+   "DSC01203.jpg",
+   "DSC01226.jpg"
+  ],
+  "selectedFile": "DSC01117.jpg",
+  "matchSource": "visual match against team avatars"
  },
  "Fernanda": {
   "role": "Tante Heideltraut von Storchensumpf",
   "immich": "Fernanda",
+  "selectedFile": "DSC07909.jpg",
   "files": [
    "DSC07666.jpg",
    "DSC07762.jpg",
@@ -30,6 +67,7 @@
  "Fynn": {
   "role": "Ensemble",
   "immich": "Fynn",
+  "selectedFile": "DSC04289.jpg",
   "files": [
    "DSC03943.jpg",
    "DSC04266.jpg",
@@ -45,6 +83,7 @@
  "Hendrik": {
   "role": "Karl",
   "immich": "Hendrik",
+  "selectedFile": "DSC01032.jpg",
   "files": [
    "DSC00909.jpg",
    "DSC00945.jpg",
@@ -57,10 +96,10 @@
  "Jakob": {
   "role": "Bruno",
   "immich": "Jakob",
+  "selectedFile": "DSC01211.jpg",
   "files": [
    "DSC01209.jpg",
    "DSC01211.jpg",
-   "DSC01247.jpg",
    "DSC01256.jpg",
    "DSC01391.jpg",
    "DSC01434.jpg",
@@ -69,23 +108,32 @@
  },
  "Jonas": {
   "role": "Vetter Viktor",
-  "files": [],
-  "note": "KEINE FAVS (Jonas)"
+  "files": [
+   "DSC05002.jpg",
+   "DSC05069.jpg",
+   "DSC05083.jpg"
+  ],
+  "selectedFile": "DSC05069.jpg",
+  "matchSource": "visual match against team avatars"
  },
  "Jule": {
   "role": "Motte",
   "immich": "Jule",
+  "selectedFile": "DSC00390.jpg",
   "files": [
    "DSC00289.jpg",
    "DSC00359.jpg",
-   "DSC00363.jpg",
    "DSC00390.jpg",
-   "DSC00397.jpg"
+   "DSC00397.jpg",
+   "DSC09812.jpg",
+   "DSC09825.jpg",
+   "DSC09893.jpg"
   ]
  },
  "Julian": {
   "role": "Ensemble",
   "immich": "Julian",
+  "selectedFile": "DSC02425.jpg",
   "files": [
    "DSC02361.jpg",
    "DSC02381.jpg",
@@ -97,6 +145,7 @@
  "Lena": {
   "role": "Ensemble",
   "immich": "Lena",
+  "selectedFile": "DSC07462.jpg",
   "files": [
    "DSC07080.jpg",
    "DSC07146.jpg",
@@ -112,12 +161,18 @@
  },
  "Lina": {
   "role": "Fiona",
-  "files": [],
-  "note": "KEINE FAVS (??)"
+  "files": [
+   "DSC03446.jpg",
+   "DSC03484.jpg",
+   "DSC03504.jpg"
+  ],
+  "selectedFile": "DSC03484.jpg",
+  "matchSource": "visual match against team avatars"
  },
  "LinaK": {
   "role": "Portrait",
   "immich": "Lina_K.",
+  "selectedFile": "DSC02141.jpg",
   "files": [
    "DSC02141.jpg",
    "DSC02170.jpg"
@@ -126,6 +181,7 @@
  "Logge": {
   "role": "Bote / Diener",
   "immich": "Logge",
+  "selectedFile": "DSC09996.jpg",
   "files": [
    "DSC00009.jpg",
    "DSC00053.jpg",
@@ -150,12 +206,30 @@
  },
  "Louis": {
   "role": "Graf Thaddäus von Falkenstein",
-  "files": [],
-  "note": "KEINE FAVS (Louis)"
+  "files": [
+   "DSC08153.jpg",
+   "DSC08167.jpg",
+   "DSC08194.jpg",
+   "DSC08739.jpg",
+   "DSC08752.jpg",
+   "DSC08763.jpg",
+   "DSC08813.jpg",
+   "DSC08817.jpg",
+   "DSC08842.jpg",
+   "DSC08868.jpg",
+   "DSC08880.jpg",
+   "DSC08895.jpg",
+   "DSC08925.jpg",
+   "DSC08937.jpg",
+   "DSC09046.jpg"
+  ],
+  "selectedFile": "DSC08937.jpg",
+  "matchSource": "visual match against team avatars"
  },
  "Marcella": {
   "role": "Suzie",
   "immich": "Marcella",
+  "selectedFile": "DSC01736.jpg",
   "files": [
    "DSC01642.jpg",
    "DSC01646.jpg",
@@ -170,6 +244,7 @@
  "Max": {
   "role": "Ensemble",
   "immich": "Max",
+  "selectedFile": "DSC08611.jpg",
   "files": [
    "DSC08313.jpg",
    "DSC08335.jpg",
@@ -189,12 +264,12 @@
  "Maximilian": {
   "role": "Ensemble",
   "immich": "Maximilian",
+  "selectedFile": "DSC01670.jpg",
   "files": [
    "DSC01318.jpg",
    "DSC01345.jpg",
    "DSC01366.jpg",
    "DSC01638.jpg",
-   "DSC01646.jpg",
    "DSC01670.jpg",
    "DSC01694.jpg"
   ]
@@ -202,7 +277,11 @@
  "Nela": {
   "role": "Felia",
   "immich": "Nela",
+  "selectedFile": "DSC04582.jpg",
   "files": [
+   "DSC03384.jpg",
+   "DSC03401.jpg",
+   "DSC03429.jpg",
    "DSC04455.jpg",
    "DSC04462.jpg",
    "DSC04470.jpg",
@@ -219,6 +298,7 @@
  "Nele": {
   "role": "Prinzessin Iset",
   "immich": "Nele",
+  "selectedFile": "DSC05733.jpg",
   "files": [
    "DSC05733.jpg",
    "DSC05738.jpg",
@@ -233,6 +313,7 @@
  "Niko": {
   "role": "Praktikant Emil",
   "immich": "Nikodem",
+  "selectedFile": "DSC08464.jpg",
   "files": [
    "DSC08086.jpg",
    "DSC08104.jpg",
@@ -251,6 +332,7 @@
  "Nora": {
   "role": "Portrait",
   "immich": "Nora",
+  "selectedFile": "DSC06140.jpg",
   "files": [
    "DSC06122.jpg",
    "DSC06140.jpg",
@@ -264,6 +346,7 @@
  "Raphael": {
   "role": "Diener",
   "immich": "Raphael",
+  "selectedFile": "DSC06494.jpg",
   "files": [
    "DSC06395.jpg",
    "DSC06426.jpg",
@@ -278,12 +361,22 @@
  },
  "Sebastian": {
   "role": "Butler Wilson / Regie",
-  "files": [],
-  "note": "KEINE FAVS (Sebastian)"
+  "files": [
+   "DSC00348.jpg",
+   "DSC00363.jpg",
+   "DSC00406.jpg",
+   "DSC00504.jpg",
+   "DSC01087.jpg",
+   "DSC01095.jpg",
+   "DSC01247.jpg"
+  ],
+  "selectedFile": "DSC00504.jpg",
+  "matchSource": "visual match against team avatars"
  },
  "Sophie": {
   "role": "Mia",
   "immich": "Sophie",
+  "selectedFile": "DSC03755.jpg",
   "files": [
    "DSC03755.jpg",
    "DSC03784.jpg"
@@ -291,12 +384,20 @@
  },
  "Theresa": {
   "role": "Clara",
-  "files": [],
-  "note": "KEINE FAVS (Theresa)"
+  "files": [
+   "DSC00038.jpg",
+   "DSC00080.jpg",
+   "DSC00108.jpg",
+   "DSC00487.jpg",
+   "DSC00502.jpg"
+  ],
+  "selectedFile": "DSC00487.jpg",
+  "matchSource": "visual match against team avatars"
  },
  "Till": {
   "role": "Herr Schniebli",
   "immich": "Till",
+  "selectedFile": "DSC04930.jpg",
   "files": [
    "DSC04930.jpg",
    "DSC05098.jpg",
@@ -316,6 +417,7 @@
  "Tobias": {
   "role": "Jacques",
   "immich": "Tobi",
+  "selectedFile": "DSC02772.jpg",
   "files": [
    "DSC02688.jpg",
    "DSC02710.jpg",
@@ -329,6 +431,7 @@
  "Vanessa": {
   "role": "Ensemble",
   "immich": "Vanessa",
+  "selectedFile": "DSC07443.jpg",
   "files": [
    "DSC06725.jpg",
    "DSC06797.jpg",
@@ -343,7 +446,14 @@
  "Yunus": {
   "role": "Dr. Adrian Düsterwald",
   "immich": "Yunus",
+  "selectedFile": "DSC09378.jpg",
   "files": [
+   "DSC09318.jpg",
+   "DSC09326.jpg",
+   "DSC09337.jpg",
+   "DSC09378.jpg",
+   "DSC09406.jpg",
+   "DSC09452.jpg",
    "DSC09493.jpg"
   ]
  }
