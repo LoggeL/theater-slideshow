@@ -274,12 +274,14 @@
       const posterImage = $('posterImage');
       const creditsTitle = $('creditsTitle');
       const creditsGrid = $('creditsGrid');
-      const posterFiles = ['assets/posters/moon.jpeg', 'assets/posters/castle.jpeg'];
+      const appVersion = '2026-08-21-no-placeholder';
+      const versioned = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${appVersion}`;
+      const posterFiles = ['assets/posters/moon.jpeg', 'assets/posters/castle.jpeg'].map(versioned);
       const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
       function imageSource(item) {
-        if (item.type === 'cast') return `assets/cast/${item.selectedFile}`;
-        if (item.type === 'feature') return item.image || null;
+        if (item.type === 'cast') return versioned(`assets/cast/${item.selectedFile}`);
+        if (item.type === 'feature') return item.image ? versioned(item.image) : null;
         return null;
       }
 
@@ -346,7 +348,9 @@
         }
         $('counter').textContent = `${String(index + 1).padStart(2, '0')} / ${String(state.slides.length).padStart(2, '0')}`;
         $('progress').style.width = `${((index + 1) / state.slides.length) * 100}%`;
-        history.replaceState(null, '', `#${index + 1}`);
+        const currentUrl = new URL(location.href);
+        currentUrl.hash = String(index + 1);
+        history.replaceState(null, '', currentUrl);
         slide.classList.add('ready');
         preload(index + direction);
       }
@@ -408,7 +412,12 @@
 
       posterFiles.forEach((src) => { new Image().src = src; });
 
-      Promise.all([fetch('cast-candidates.json'), fetch('creative-team.json'), fetch('technical-team.json')])
+      const fresh = { cache: 'no-store' };
+      Promise.all([
+        fetch(versioned('cast-candidates.json'), fresh),
+        fetch(versioned('creative-team.json'), fresh),
+        fetch(versioned('technical-team.json'), fresh)
+      ])
         .then(async ([castResponse, teamResponse, technicalResponse]) => {
           if (!castResponse.ok) throw new Error(castResponse.statusText);
           if (!teamResponse.ok) throw new Error(teamResponse.statusText);
