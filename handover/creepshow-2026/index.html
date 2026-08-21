@@ -74,6 +74,21 @@
         animation: drift 11s ease-in-out both;
       }
       @keyframes drift { from { transform: scale(1.015); } to { transform: scale(1.06) translateY(-.5%); } }
+      .portrait-initials {
+        position: absolute;
+        z-index: 2;
+        top: clamp(28px, 4vw, 64px);
+        right: clamp(28px, 4vw, 64px);
+        display: none;
+        color: rgba(255,255,255,.34);
+        font-family: var(--display);
+        font-size: clamp(72px, 11vw, 176px);
+        font-weight: 900;
+        line-height: .8;
+        letter-spacing: -.06em;
+        text-shadow: 0 4px 28px rgba(0,0,0,.72);
+      }
+      .slide.is-placeholder .portrait-initials { display: block; }
       .cast-label {
         position: absolute;
         z-index: 3;
@@ -93,6 +108,7 @@
         text-wrap: balance;
         text-shadow: 0 5px 24px #000;
       }
+      .slide.is-feature .name { font-size: clamp(38px, 4vw, 68px); }
       .role { margin-top: 16px; font-size: clamp(16px, 1.55vw, 27px); font-weight: 540; line-height: 1.18; color: rgba(255,255,255,.86); text-shadow: 0 3px 12px #000; }
       .credits-panel {
         position: absolute;
@@ -116,6 +132,7 @@
       }
       .slide.is-credits .portrait-bg,
       .slide.is-credits .portrait-main,
+      .slide.is-credits .portrait-initials,
       .slide.is-credits .cast-label { display: none; }
       .slide.is-credits .credits-panel { display: grid; }
       .credits-content { position: relative; z-index: 1; }
@@ -207,6 +224,7 @@
         .poster-image { object-position: center; }
         .cast-label, .reverse .cast-label { left: 24px; right: 24px; bottom: 34px; text-align: left; }
         .name { font-size: clamp(40px, 12vw, 66px); }
+        .slide.is-feature .name { font-size: clamp(36px, 10vw, 56px); }
         .credits-panel { padding: 28px 24px 46px; align-content: end; }
         .credits-title { margin: 7px 0 17px; font-size: clamp(34px, 10vw, 52px); }
         .credits-grid { gap: 12px 16px; }
@@ -227,8 +245,9 @@
         <div class="portrait">
           <img class="portrait-bg" id="photoBg" alt="" />
           <img class="portrait-main" id="photo" alt="" />
+          <div class="portrait-initials" id="portraitInitials" aria-hidden="true"></div>
           <div class="cast-label">
-            <div class="eyebrow">Creepshow 2026 · Ensemble</div>
+            <div class="eyebrow" id="eyebrow">Creepshow 2026 · Ensemble</div>
             <div class="name" id="person"></div>
             <div class="role" id="role"></div>
           </div>
@@ -259,6 +278,8 @@
       const slide = $('slide');
       const photo = $('photo');
       const photoBg = $('photoBg');
+      const eyebrow = $('eyebrow');
+      const portraitInitials = $('portraitInitials');
       const poster = $('poster');
       const posterImage = $('posterImage');
       const creditsTitle = $('creditsTitle');
@@ -266,10 +287,16 @@
       const posterFiles = ['creepshow-poster-moon.jpeg', 'creepshow-poster-castle.jpeg'];
       const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
+      function imageSource(item) {
+        if (item.type === 'cast') return `previews/${item.selectedFile}`;
+        if (item.type === 'feature') return item.image;
+        return null;
+      }
+
       function preload(index) {
         const item = state.slides[(index + state.slides.length) % state.slides.length];
-        if (!item || item.type !== 'cast') return;
-        new Image().src = `previews/${item.selectedFile}`;
+        const src = item && imageSource(item);
+        if (src) new Image().src = src;
       }
 
       function preloadImage(src) {
@@ -305,15 +332,20 @@
         const isCredits = item.type === 'credits';
         slide.classList.toggle('reverse', index % 2 === 1);
         slide.classList.toggle('is-credits', isCredits);
+        slide.classList.toggle('is-feature', item.type === 'feature');
+        slide.classList.toggle('is-placeholder', Boolean(item.initials));
         poster.style.setProperty('--poster-image', `url('${posterSrc}')`);
         posterImage.src = posterSrc;
         if (isCredits) {
           renderCredits(item);
         } else {
-          const src = `previews/${item.selectedFile}`;
-          photo.alt = `${item.person} als ${item.role}`;
+          const src = imageSource(item);
+          const isFeature = item.type === 'feature';
+          photo.alt = item.initials ? `Offizieller Avatar-Platzhalter für ${item.person}` : `${item.person} · ${item.role}`;
           photo.src = src;
           photoBg.src = src;
+          eyebrow.textContent = isFeature ? 'Creepshow 2026 · Technikteam' : 'Creepshow 2026 · Ensemble';
+          portraitInitials.textContent = item.initials || '';
           $('person').textContent = item.person;
           $('role').textContent = item.role;
         }
@@ -329,12 +361,12 @@
         const token = ++state.renderToken;
         const normalized = (index + state.slides.length) % state.slides.length;
         const item = state.slides[normalized];
-        if (item.type === 'cast') {
-          const src = `previews/${item.selectedFile}`;
+        const src = imageSource(item);
+        if (src) {
           try {
             await preloadImage(src);
           } catch {
-            $('status').textContent = `Bild fehlt: ${item.selectedFile}`;
+            $('status').textContent = `Bild fehlt: ${src}`;
             $('status').classList.remove('hidden');
             return;
           }
@@ -381,15 +413,22 @@
 
       posterFiles.forEach((src) => { new Image().src = src; });
 
-      Promise.all([fetch('cast-candidates.json'), fetch('creative-team.json')])
-        .then(async ([castResponse, teamResponse]) => {
+      Promise.all([fetch('cast-candidates.json'), fetch('creative-team.json'), fetch('technical-team.json')])
+        .then(async ([castResponse, teamResponse, technicalResponse]) => {
           if (!castResponse.ok) throw new Error(castResponse.statusText);
           if (!teamResponse.ok) throw new Error(teamResponse.statusText);
+          if (!technicalResponse.ok) throw new Error(technicalResponse.statusText);
           const cast = await castResponse.json();
           const creativeTeam = await teamResponse.json();
+          const technicalTeam = await technicalResponse.json();
+          const creativeSlides = creativeTeam.flatMap((item) => {
+            const overview = { type: 'credits', ...item };
+            if (item.title !== 'Technik') return [overview];
+            return [overview, ...technicalTeam.map((member) => ({ type: 'feature', ...member }))];
+          });
           state.slides = [
             ...Object.entries(cast).map(([person, value]) => ({ type: 'cast', person, ...value })),
-            ...creativeTeam.map((item) => ({ type: 'credits', ...item }))
+            ...creativeSlides
           ];
           const requested = Number(location.hash.slice(1));
           await render(Number.isFinite(requested) && requested > 0 ? requested - 1 : 0, 1, false);

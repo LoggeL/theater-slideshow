@@ -1,0 +1,71 @@
+[
+  {
+    "person": "Leo Rittmann",
+    "role": "Technische Leitung · Lichttechnik",
+    "image": ".media/images/image_005.jpg"
+  },
+  {
+    "person": "Christian Weibel",
+    "role": "Inspizient",
+    "image": ".media/images/image_001.jpg"
+  },
+  {
+    "person": "Wolfgang Scherr",
+    "role": "Tontechnik",
+    "image": ".media/images/image_009.jpg"
+  },
+  {
+    "person": "Ursula Scherr",
+    "role": "Tontechnik",
+    "image": ".media/images/image_008.jpg"
+  },
+  {
+    "person": "Florian Weibel",
+    "role": "Tontechnik",
+    "image": ".media/images/image_002.jpg"
+  },
+  {
+    "person": "Jonas Berst",
+    "role": "Lichttechnik",
+    "image": ".media/images/image_003.jpg"
+  },
+  {
+    "person": "Daniel Vogt",
+    "role": "Lichttechnik",
+    "image": ".media/images/image_010.svg",
+    "initials": "DV"
+  },
+  {
+    "person": "Philipp Schäfer",
+    "role": "Bühnentechnik",
+    "image": ".media/images/image_007.jpg"
+  },
+  {
+    "person": "Maren Archinger",
+    "role": "Bühnentechnik",
+    "image": ".media/images/image_006.jpg"
+  },
+  {
+    "person": "Julian Peters",
+    "role": "Bühnentechnik",
+    "image": ".media/images/image_004.jpg"
+  },
+  {
+    "person": "Emilia Berg",
+    "role": "Bühnentechnik",
+    "image": ".media/images/image_010.svg",
+    "initials": "EB"
+  },
+  {
+    "person": "Elea Lutzer",
+    "role": "Bühnentechnik",
+    "image": ".media/images/image_010.svg",
+    "initials": "EL"
+  },
+  {
+    "person": "Julian Vierheller",
+    "role": "Bühnentechnik",
+    "image": ".media/images/image_010.svg",
+    "initials": "JV"
+  }
+]

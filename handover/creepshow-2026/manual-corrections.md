@@ -7,3 +7,4 @@
 - Every cast member now has a reviewed `selectedFile`; shared scene images may intentionally appear for more than one person.
 - Final cast and full names reconciled against `final.pdf`: Raphael and Vanessa removed; Maren Archinger added with visually confirmed `DSC00143.jpg`.
 - Kreativteam credits from `final.pdf` added as four dedicated slideshow pages.
+- All 13 technical team members are additionally featured on individual image slides. Nine use official website portraits; Daniel Vogt, Emilia Berg, Elea Lutzer and Julian Vierheller use the website's explicit placeholder avatar with initials because no portrait is published there.

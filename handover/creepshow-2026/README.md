@@ -34,6 +34,8 @@ handover/creepshow-2026/
 ├── personsheets/          # pro erkannter Person ein Kandidaten-Sheet
 ├── cast-candidates.json   # Cast -> Rolle -> Kandidatenbilder
 ├── creative-team.json     # Kreativteam-Credits aus final.pdf, auf vier Slides verteilt
+├── technical-team.json    # 13 individuelle Technikteam-Features mit Rolle und Bild
+├── .media/                # lokal eingefrorene offizielle Team-Avatare + Quelleninventar
 ├── creepshow-poster-moon.jpeg    # offizielles Hochformat-Plakat, Charakter-Set Mond/Haus
 ├── creepshow-poster-castle.jpeg  # offizielles Hochformat-Plakat, Charakter-Set Schloss
 ├── manual-corrections.md  # manuelle Korrekturen
@@ -94,6 +96,8 @@ Aktueller Stand:
 - 236 Kandidatenreferenzen auf 234 eindeutige Bilder; gemeinsame Szenen dürfen mehreren Personen zugeordnet sein
 - keine Person mehr ohne Match
 - 4 zusätzliche Kreativteam-Slides mit allen Funktionen und Namen aus `final.pdf`
+- 13 zusätzliche Bild-Features für alle Personen aus technischer Leitung, Inspizienz, Ton-, Licht- und Bühnentechnik
+- 9 offizielle Team-Porträts; 4 auf der Website ausdrücklich fehlende Porträts werden mit dem offiziellen Avatar-Platzhalter und Initialen gezeigt
 
 Aliases/unsichere Matches:
 
