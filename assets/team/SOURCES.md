@@ -1,7 +1,7 @@
 # Team portrait sources
 
-The portraits and placeholder in this directory are frozen copies of the
-official Kolpingtheater Ramsen team avatars:
+The portraits in this directory are frozen copies of the official
+Kolpingtheater Ramsen team avatars:
 
 <https://github.com/Kolpingtheater-Ramsen/next-theater/tree/main/public/img/team/avatar>
 
@@ -16,4 +16,3 @@ Mapping:
 - `philipp.jpg` → `Philipp.jpg`
 - `ursula.jpg` → `Ursula.jpg`
 - `wolfgang.jpg` → `Wolfgang.jpg`
-- `placeholder.svg` → `placeholder.svg`

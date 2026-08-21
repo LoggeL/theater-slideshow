@@ -31,9 +31,7 @@
   },
   {
     "person": "Daniel Vogt",
-    "role": "Lichttechnik",
-    "image": "assets/team/placeholder.svg",
-    "initials": "DV"
+    "role": "Lichttechnik"
   },
   {
     "person": "Philipp Schäfer",
@@ -52,20 +50,14 @@
   },
   {
     "person": "Emilia Berg",
-    "role": "Bühnentechnik",
-    "image": "assets/team/placeholder.svg",
-    "initials": "EB"
+    "role": "Bühnentechnik"
   },
   {
     "person": "Elea Lutzer",
-    "role": "Bühnentechnik",
-    "image": "assets/team/placeholder.svg",
-    "initials": "EL"
+    "role": "Bühnentechnik"
   },
   {
     "person": "Julian Vierheller",
-    "role": "Bühnentechnik",
-    "image": "assets/team/placeholder.svg",
-    "initials": "JV"
+    "role": "Bühnentechnik"
   }
 ]

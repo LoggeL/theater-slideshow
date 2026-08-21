@@ -16,8 +16,7 @@ Produktive Cast-, Rollen- und Kreativteam-Slideshow des Kolpingtheaters Ramsen.
 
 Die Namen und Funktionen wurden mit dem finalen Programmheft abgeglichen. Die
 Technikporträts stammen aus den offiziellen Team-Assets der Theater-Website;
-wo dort kein Porträt veröffentlicht ist, wird der offizielle Platzhalter mit
-Initialen verwendet.
+wo dort kein Porträt veröffentlicht ist, bleibt das Feature bewusst bildfrei.
 
 ## Struktur
 
@@ -29,7 +28,7 @@ technical-team.json       Technikteam-Features
 assets/
 ├── cast/                 28 verwendete Castbilder
 ├── posters/              2 Plakatmotive
-└── team/                 9 Teamfotos + offizieller Platzhalter
+└── team/                 9 offizielle Teamfotos
 ```
 
 ## Lokal starten

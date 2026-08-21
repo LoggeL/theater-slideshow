@@ -74,21 +74,14 @@
         animation: drift 11s ease-in-out both;
       }
       @keyframes drift { from { transform: scale(1.015); } to { transform: scale(1.06) translateY(-.5%); } }
-      .portrait-initials {
-        position: absolute;
-        z-index: 2;
-        top: clamp(28px, 4vw, 64px);
-        right: clamp(28px, 4vw, 64px);
-        display: none;
-        color: rgba(255,255,255,.34);
-        font-family: var(--display);
-        font-size: clamp(72px, 11vw, 176px);
-        font-weight: 900;
-        line-height: .8;
-        letter-spacing: -.06em;
-        text-shadow: 0 4px 28px rgba(0,0,0,.72);
+      .slide.is-no-photo .portrait {
+        background:
+          radial-gradient(circle at 72% 24%, rgba(255,117,0,.16), transparent 28%),
+          radial-gradient(circle at 22% 78%, rgba(49,83,123,.32), transparent 38%),
+          linear-gradient(145deg, #070b12, #111722 56%, #050507);
       }
-      .slide.is-placeholder .portrait-initials { display: block; }
+      .slide.is-no-photo .portrait-bg,
+      .slide.is-no-photo .portrait-main { display: none; }
       .cast-label {
         position: absolute;
         z-index: 3;
@@ -132,7 +125,6 @@
       }
       .slide.is-credits .portrait-bg,
       .slide.is-credits .portrait-main,
-      .slide.is-credits .portrait-initials,
       .slide.is-credits .cast-label { display: none; }
       .slide.is-credits .credits-panel { display: grid; }
       .credits-content { position: relative; z-index: 1; }
@@ -245,7 +237,6 @@
         <div class="portrait">
           <img class="portrait-bg" id="photoBg" alt="" />
           <img class="portrait-main" id="photo" alt="" />
-          <div class="portrait-initials" id="portraitInitials" aria-hidden="true"></div>
           <div class="cast-label">
             <div class="eyebrow" id="eyebrow">Creepshow 2026 · Ensemble</div>
             <div class="name" id="person"></div>
@@ -279,7 +270,6 @@
       const photo = $('photo');
       const photoBg = $('photoBg');
       const eyebrow = $('eyebrow');
-      const portraitInitials = $('portraitInitials');
       const poster = $('poster');
       const posterImage = $('posterImage');
       const creditsTitle = $('creditsTitle');
@@ -289,7 +279,7 @@
 
       function imageSource(item) {
         if (item.type === 'cast') return `assets/cast/${item.selectedFile}`;
-        if (item.type === 'feature') return item.image;
+        if (item.type === 'feature') return item.image || null;
         return null;
       }
 
@@ -330,22 +320,27 @@
         state.index = index;
         const posterSrc = posterFiles[index % posterFiles.length];
         const isCredits = item.type === 'credits';
+        const src = imageSource(item);
         slide.classList.toggle('reverse', index % 2 === 1);
         slide.classList.toggle('is-credits', isCredits);
         slide.classList.toggle('is-feature', item.type === 'feature');
-        slide.classList.toggle('is-placeholder', Boolean(item.initials));
+        slide.classList.toggle('is-no-photo', item.type === 'feature' && !src);
         poster.style.setProperty('--poster-image', `url('${posterSrc}')`);
         posterImage.src = posterSrc;
         if (isCredits) {
           renderCredits(item);
         } else {
-          const src = imageSource(item);
           const isFeature = item.type === 'feature';
-          photo.alt = item.initials ? `Offizieller Avatar-Platzhalter für ${item.person}` : `${item.person} · ${item.role}`;
-          photo.src = src;
-          photoBg.src = src;
+          if (src) {
+            photo.alt = `${item.person} · ${item.role}`;
+            photo.src = src;
+            photoBg.src = src;
+          } else {
+            photo.alt = '';
+            photo.removeAttribute('src');
+            photoBg.removeAttribute('src');
+          }
           eyebrow.textContent = isFeature ? 'Creepshow 2026 · Technikteam' : 'Creepshow 2026 · Ensemble';
-          portraitInitials.textContent = item.initials || '';
           $('person').textContent = item.person;
           $('role').textContent = item.role;
         }
