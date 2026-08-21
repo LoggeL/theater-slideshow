@@ -33,6 +33,7 @@ handover/creepshow-2026/
 ├── sheets/                # 11 Contact-Sheets mit Nummerierung #0..#376
 ├── personsheets/          # pro erkannter Person ein Kandidaten-Sheet
 ├── cast-candidates.json   # Cast -> Rolle -> Kandidatenbilder
+├── creative-team.json     # Kreativteam-Credits aus final.pdf, auf vier Slides verteilt
 ├── creepshow-poster-moon.jpeg    # offizielles Hochformat-Plakat, Charakter-Set Mond/Haus
 ├── creepshow-poster-castle.jpeg  # offizielles Hochformat-Plakat, Charakter-Set Schloss
 ├── manual-corrections.md  # manuelle Korrekturen
@@ -42,7 +43,8 @@ handover/creepshow-2026/
 
 ## Datenlage
 
-Website-/Cast-Daten aus `Kolpingtheater-Ramsen/next-theater`, `src/data/team.json`.
+Vorläufige Website-/Cast-Daten kamen aus `Kolpingtheater-Ramsen/next-theater`, `src/data/team.json`.
+Für die finale Besetzung, Vollnamen und das Kreativteam ist die lokal übergebene `final.pdf` maßgeblich; sie wird nicht ins Repo committed.
 
 Aktuelles Stück: **Creepshow 2026 / Open Air**
 
@@ -50,35 +52,34 @@ Cast mit Rollen:
 
 | Person | Rolle |
 |---|---|
-| Carina | Drusilla |
-| Elena | Lucy |
-| Fernanda | Tante Heideltraut von Storchensumpf |
-| Fynn | Ensemble |
-| Hendrik | Karl |
-| Jakob | Bruno |
-| Jonas | Vetter Viktor |
-| Jule | Motte |
-| Julian | Ensemble |
-| Lena | Ensemble |
-| Lina | Fiona |
-| LinaK | Portrait |
-| Logge / Johannes | Bote / Diener |
-| Louis | Graf Thaddäus von Falkenstein |
-| Marcella | Suzie |
-| Max | Ensemble |
-| Maximilian | Ensemble |
-| Nela | Felia |
-| Nele | Prinzessin Iset |
-| Niko | Praktikant Emil |
-| Nora | Portrait |
-| Raphael | Diener |
-| Sebastian | Butler Wilson / Regie |
-| Sophie | Mia |
-| Theresa | Clara |
-| Till | Herr Schniebli |
-| Tobias | Jacques |
-| Vanessa | Ensemble |
-| Yunus | Dr. Adrian Düsterwald |
+| Carina Sattler | Hausgeist Drusilla von Falkenstein |
+| Elena Matheis | Lucy von Falkenstein |
+| Fernanda Fischer | Heideltraut von Storchensumpf |
+| Fynn Hüttmann | Ensemble |
+| Hendrik Kummermehr | Karl / Ensemble |
+| Jakob Leidig | Bruno / Ensemble |
+| Johannes Stüber | Paketbote / Ensemble |
+| Jonas Berst | Viktor von Falkenstein |
+| Jule Tyras | Motte |
+| Julian Peters | Ensemble |
+| Lena Wischnowski | Ensemble |
+| Lina Kutschan | Portrait |
+| Lina Roos | Fiona |
+| Louis Noe | Graf Thaddäus von Falkenstein |
+| Marcella Minklei | Suzie / Ensemble |
+| Maren Archinger | Ensemble |
+| Max Hüther | Ensemble |
+| Maximilian Fischer | Ensemble |
+| Nela Rödel | Felia |
+| Nele Rörig | Prinzessin Iset |
+| Nikodem Wozniak | Praktikant Emil |
+| Nora Bidinger | Portrait |
+| Sebastian Sattler | Butler Wilson |
+| Sophie Schäfer | Mia |
+| Theresa Kummermehr | Clara von Falkenstein |
+| Till Michel | Herr Schniebli / Ensemble |
+| Tobias Knechtel | Jacques der Koch |
+| Yunus Sari | Dr. Adrian Düsterwald |
 
 ## Automatisches Matching
 
@@ -86,16 +87,17 @@ Immich Face Recognition wurde gegen die gelikten Bilder gematcht.
 
 Aktueller Stand:
 
-- 29 Cast-Mitglieder
-- 22 Personen mit automatisch zugeordneten Kandidatenbildern
-- 7 Personen visuell gegen die beschrifteten Team-Avatare zugeordnet
-- 29 Personen mit ausgewähltem `selectedFile`
-- 251 Kandidatenreferenzen auf 249 eindeutige Bilder; gemeinsame Szenen dürfen mehreren Personen zugeordnet sein
+- 28 Cast-Mitglieder gemäß `final.pdf`
+- 21 Personen mit Immich-Zuordnung
+- 8 Personen visuell gegen beschriftete Team-Avatare bzw. `final.pdf` geprüft; Carina ist in beiden Gruppen enthalten
+- 28 Personen mit ausgewähltem `selectedFile`
+- 236 Kandidatenreferenzen auf 234 eindeutige Bilder; gemeinsame Szenen dürfen mehreren Personen zugeordnet sein
 - keine Person mehr ohne Match
+- 4 zusätzliche Kreativteam-Slides mit allen Funktionen und Namen aus `final.pdf`
 
 Aliases/unsichere Matches:
 
-- `Niko` -> Immich `Nikodem`
+- `Nikodem Wozniak` -> Immich `Nikodem`
 - `Tobias` -> Immich `Tobi`
 - `LinaK` -> Immich `Lina_K.`
 - `Carina` -> Immich `Caro` (von Logge bestätigt)
@@ -124,9 +126,8 @@ Steuerung: `←/→` = Rollen wechseln · `Leertaste` = Autoplay · `F` = Vollbi
 
 ## Offene Punkte
 
-1. Vollnamen ergänzen. `team.json` enthält meist nur Vornamen.
-2. Aus der geprüften Web-App bei Bedarf Print-Dateien exportieren.
-3. Beschriftungsreihenfolge final freigeben; die App zeigt derzeit `Schauspieler` über `Rolle`.
+1. Aus der geprüften Web-App bei Bedarf Print-Dateien exportieren.
+2. Beschriftungsreihenfolge final freigeben; die App zeigt derzeit `Schauspieler` über `Rolle`.
 
 ## Vorschlag fürs Weiterarbeiten
 

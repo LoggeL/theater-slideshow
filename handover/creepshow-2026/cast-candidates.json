@@ -1,6 +1,6 @@
 {
- "Carina": {
-  "role": "Drusilla",
+ "Carina Sattler": {
+  "role": "Hausgeist Drusilla von Falkenstein",
   "immich": "Caro",
   "files": [
    "DSC06292.jpg",
@@ -19,8 +19,8 @@
   "matchSource": "visual match against team avatars",
   "note": "Caro = Carina, confirmed by Logge"
  },
- "Elena": {
-  "role": "Lucy",
+ "Elena Matheis": {
+  "role": "Lucy von Falkenstein",
   "files": [
    "DSC00166.jpg",
    "DSC00255.jpg",
@@ -45,8 +45,8 @@
   "selectedFile": "DSC01117.jpg",
   "matchSource": "visual match against team avatars"
  },
- "Fernanda": {
-  "role": "Tante Heideltraut von Storchensumpf",
+ "Fernanda Fischer": {
+  "role": "Heideltraut von Storchensumpf",
   "immich": "Fernanda",
   "selectedFile": "DSC07909.jpg",
   "files": [
@@ -64,7 +64,7 @@
    "DSC08014.jpg"
   ]
  },
- "Fynn": {
+ "Fynn Hüttmann": {
   "role": "Ensemble",
   "immich": "Fynn",
   "selectedFile": "DSC04289.jpg",
@@ -80,8 +80,8 @@
    "DSC04322.jpg"
   ]
  },
- "Hendrik": {
-  "role": "Karl",
+ "Hendrik Kummermehr": {
+  "role": "Karl / Ensemble",
   "immich": "Hendrik",
   "selectedFile": "DSC01032.jpg",
   "files": [
@@ -93,8 +93,8 @@
    "DSC01032.jpg"
   ]
  },
- "Jakob": {
-  "role": "Bruno",
+ "Jakob Leidig": {
+  "role": "Bruno / Ensemble",
   "immich": "Jakob",
   "selectedFile": "DSC01211.jpg",
   "files": [
@@ -106,8 +106,8 @@
    "DSC01464.jpg"
   ]
  },
- "Jonas": {
-  "role": "Vetter Viktor",
+ "Jonas Berst": {
+  "role": "Viktor von Falkenstein",
   "files": [
    "DSC05002.jpg",
    "DSC05069.jpg",
@@ -116,7 +116,7 @@
   "selectedFile": "DSC05069.jpg",
   "matchSource": "visual match against team avatars"
  },
- "Jule": {
+ "Jule Tyras": {
   "role": "Motte",
   "immich": "Jule",
   "selectedFile": "DSC00390.jpg",
@@ -130,7 +130,7 @@
    "DSC09893.jpg"
   ]
  },
- "Julian": {
+ "Julian Peters": {
   "role": "Ensemble",
   "immich": "Julian",
   "selectedFile": "DSC02425.jpg",
@@ -142,7 +142,7 @@
    "DSC02465.jpg"
   ]
  },
- "Lena": {
+ "Lena Wischnowski": {
   "role": "Ensemble",
   "immich": "Lena",
   "selectedFile": "DSC07462.jpg",
@@ -159,7 +159,7 @@
    "DSC07633.jpg"
   ]
  },
- "Lina": {
+ "Lina Roos": {
   "role": "Fiona",
   "files": [
    "DSC03446.jpg",
@@ -169,7 +169,7 @@
   "selectedFile": "DSC03484.jpg",
   "matchSource": "visual match against team avatars"
  },
- "LinaK": {
+ "Lina Kutschan": {
   "role": "Portrait",
   "immich": "Lina_K.",
   "selectedFile": "DSC02141.jpg",
@@ -178,8 +178,8 @@
    "DSC02170.jpg"
   ]
  },
- "Logge": {
-  "role": "Bote / Diener",
+ "Johannes Stüber": {
+  "role": "Paketbote / Ensemble",
   "immich": "Logge",
   "selectedFile": "DSC09996.jpg",
   "files": [
@@ -204,7 +204,7 @@
   "confirmed_identity": "Johannes / Logge",
   "identity_note": "User confirmed: the referenced sheet/image is all Logge aka Johannes."
  },
- "Louis": {
+ "Louis Noe": {
   "role": "Graf Thaddäus von Falkenstein",
   "files": [
    "DSC08153.jpg",
@@ -226,8 +226,8 @@
   "selectedFile": "DSC08937.jpg",
   "matchSource": "visual match against team avatars"
  },
- "Marcella": {
-  "role": "Suzie",
+ "Marcella Minklei": {
+  "role": "Suzie / Ensemble",
   "immich": "Marcella",
   "selectedFile": "DSC01736.jpg",
   "files": [
@@ -241,7 +241,16 @@
    "DSC01789.jpg"
   ]
  },
- "Max": {
+ "Maren Archinger": {
+  "role": "Ensemble",
+  "files": [
+   "DSC00089.jpg",
+   "DSC00143.jpg"
+  ],
+  "selectedFile": "DSC00143.jpg",
+  "matchSource": "visual match against final.pdf and team avatars"
+ },
+ "Max Hüther": {
   "role": "Ensemble",
   "immich": "Max",
   "selectedFile": "DSC08611.jpg",
@@ -261,7 +270,7 @@
    "DSC08731.jpg"
   ]
  },
- "Maximilian": {
+ "Maximilian Fischer": {
   "role": "Ensemble",
   "immich": "Maximilian",
   "selectedFile": "DSC01670.jpg",
@@ -274,7 +283,7 @@
    "DSC01694.jpg"
   ]
  },
- "Nela": {
+ "Nela Rödel": {
   "role": "Felia",
   "immich": "Nela",
   "selectedFile": "DSC04582.jpg",
@@ -295,7 +304,7 @@
    "DSC04616.jpg"
   ]
  },
- "Nele": {
+ "Nele Rörig": {
   "role": "Prinzessin Iset",
   "immich": "Nele",
   "selectedFile": "DSC05733.jpg",
@@ -310,7 +319,7 @@
    "DSC05903.jpg"
   ]
  },
- "Niko": {
+ "Nikodem Wozniak": {
   "role": "Praktikant Emil",
   "immich": "Nikodem",
   "selectedFile": "DSC08464.jpg",
@@ -329,7 +338,7 @@
    "DSC08509.jpg"
   ]
  },
- "Nora": {
+ "Nora Bidinger": {
   "role": "Portrait",
   "immich": "Nora",
   "selectedFile": "DSC06140.jpg",
@@ -343,24 +352,8 @@
    "DSC06223.jpg"
   ]
  },
- "Raphael": {
-  "role": "Diener",
-  "immich": "Raphael",
-  "selectedFile": "DSC06494.jpg",
-  "files": [
-   "DSC06395.jpg",
-   "DSC06426.jpg",
-   "DSC06444.jpg",
-   "DSC06494.jpg",
-   "DSC06590.jpg",
-   "DSC06600.jpg",
-   "DSC06642.jpg",
-   "DSC06646.jpg",
-   "DSC06677.jpg"
-  ]
- },
- "Sebastian": {
-  "role": "Butler Wilson / Regie",
+ "Sebastian Sattler": {
+  "role": "Butler Wilson",
   "files": [
    "DSC00348.jpg",
    "DSC00363.jpg",
@@ -373,7 +366,7 @@
   "selectedFile": "DSC00504.jpg",
   "matchSource": "visual match against team avatars"
  },
- "Sophie": {
+ "Sophie Schäfer": {
   "role": "Mia",
   "immich": "Sophie",
   "selectedFile": "DSC03755.jpg",
@@ -382,8 +375,8 @@
    "DSC03784.jpg"
   ]
  },
- "Theresa": {
-  "role": "Clara",
+ "Theresa Kummermehr": {
+  "role": "Clara von Falkenstein",
   "files": [
    "DSC00038.jpg",
    "DSC00080.jpg",
@@ -394,8 +387,8 @@
   "selectedFile": "DSC00487.jpg",
   "matchSource": "visual match against team avatars"
  },
- "Till": {
-  "role": "Herr Schniebli",
+ "Till Michel": {
+  "role": "Herr Schniebli / Ensemble",
   "immich": "Till",
   "selectedFile": "DSC04930.jpg",
   "files": [
@@ -414,8 +407,8 @@
    "DSC05290.jpg"
   ]
  },
- "Tobias": {
-  "role": "Jacques",
+ "Tobias Knechtel": {
+  "role": "Jacques der Koch",
   "immich": "Tobi",
   "selectedFile": "DSC02772.jpg",
   "files": [
@@ -428,22 +421,7 @@
    "DSC02793.jpg"
   ]
  },
- "Vanessa": {
-  "role": "Ensemble",
-  "immich": "Vanessa",
-  "selectedFile": "DSC07443.jpg",
-  "files": [
-   "DSC06725.jpg",
-   "DSC06797.jpg",
-   "DSC06805.jpg",
-   "DSC07298.jpg",
-   "DSC07340.jpg",
-   "DSC07404.jpg",
-   "DSC07443.jpg",
-   "DSC07448.jpg"
-  ]
- },
- "Yunus": {
+ "Yunus Sari": {
   "role": "Dr. Adrian Düsterwald",
   "immich": "Yunus",
   "selectedFile": "DSC09378.jpg",

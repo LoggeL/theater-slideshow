@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Produktion & Leitung",
+    "groups": [
+      { "role": "Produktion, Buch & Regie", "names": ["Sebastian Sattler"] },
+      { "role": "Regieassistenz & Dramaturgie", "names": ["Louis Noe", "Tobias Knechtel"] },
+      { "role": "Technische Leitung", "names": ["Leo Rittmann"] },
+      { "role": "Inspizient", "names": ["Christian Weibel"] }
+    ]
+  },
+  {
+    "title": "Bühne & Ausstattung",
+    "groups": [
+      {
+        "role": "Bühnenbau / Requisiten",
+        "names": [
+          "Leo Rittmann",
+          "Julian Peters",
+          "Christian Weibel",
+          "Maren Archinger",
+          "Philipp Schäfer",
+          "Louis Noe",
+          "Max Hüther",
+          "Tobias Knechtel",
+          "Johannes Stüber",
+          "Jonas Berst",
+          "Cathrin Raasch"
+        ]
+      },
+      { "role": "Kostümbild", "names": ["Cathrin Raasch"] },
+      { "role": "Bühnenmalerin", "names": ["Marita Könnel-Sattler"] }
+    ]
+  },
+  {
+    "title": "Technik",
+    "groups": [
+      { "role": "Tontechnik", "names": ["Wolfgang Scherr", "Ursula Scherr", "Florian Weibel"] },
+      { "role": "Lichttechnik", "names": ["Jonas Berst", "Leo Rittmann", "Daniel Vogt"] },
+      {
+        "role": "Bühnentechnik",
+        "names": ["Philipp Schäfer", "Maren Archinger", "Julian Peters", "Emilia Berg", "Elea Lutzer", "Julian Vierheller"]
+      }
+    ]
+  },
+  {
+    "title": "Gestaltung & Medien",
+    "groups": [
+      { "role": "Choreographie", "names": ["Carina Sattler"] },
+      { "role": "Social Media", "names": ["Nele Rörig"] },
+      { "role": "Homepage", "names": ["Johannes Stüber"] },
+      { "role": "Mediengestaltung", "names": ["Max Hüther", "Leo Rittmann"] }
+    ]
+  }
+]
